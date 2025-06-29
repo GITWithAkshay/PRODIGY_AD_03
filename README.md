@@ -104,3 +104,13 @@ tkinter-stopwatch-app/
 Feel free to use, modify, and distribute.
 
 ---
+
+## 🙏 Acknowledgements
+
+* 🧩 **[CustomTkinter](https://github.com/TomSchimansky/CustomTkinter)** – for providing a modern and intuitive way to design GUI in Python
+* 📅 **[Tkcalendar](https://github.com/j4321/tkcalendar)** – for the simple and effective date-picker widget
+* 🧠 Python Community – for rich documentation and endless support
+
+Special thanks to the open-source contributors who maintain these projects and to anyone who uses or improves upon this app 🙌
+
+---
