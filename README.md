@@ -1,102 +1,106 @@
-# 📝 Todo List Application - CustomTkinter Edition
+# ⏱️ Advanced Stopwatch App (Python + CustomTkinter)
 
-A powerful and customizable Todo List application built with **Python**, leveraging **CustomTkinter** for modern UI, **tkcalendar** for date selection, and **PIL** for image handling. It allows users to add, edit, delete, and manage tasks with due dates and priorities in a user-friendly interface.
+A modern, feature-rich desktop stopwatch built using Python and [CustomTkinter](https://github.com/TomSchimansky/CustomTkinter). Designed with real-time precision, lap tracking, and beautiful dark/light themes, this stopwatch is perfect for productivity, workouts, or coding sprints!
+
 ---
 
-## 📦 Features
 
-* ✅ **Add/Delete/Update Tasks** with description, due date, and priority
-* 🗓️ **Date Picker** using `tkcalendar.DateEntry`
-* 🔁 **Recurring Reminders** with threading and real-time tracking
-* 💾 **Auto-save and Load** from JSON file
-* 🔍 **Task Filtering** (e.g., Today’s Tasks, Upcoming Tasks)
-* 🌙 **Dark Mode UI** using `customtkinter`
-* 🖼️ **Background and Icon Support** via `PIL`
-* ⚠️ **Popup Alerts and MessageBoxes**
-* 📉 **Overdue Task Indicator**
-* 🔄 **Dynamic Task Refresh**
+## 🖥️ Features
+
+* ✅ **Start / Pause / Reset** the stopwatch
+* 🧮 **Lap recording** with individual and cumulative times
+* 🧹 **Clear laps** with one click
+* 🌙 **Dark / Light mode toggle**
+* 🕒 Real-time millisecond precision updates
+* 🧵 Background threading ensures smooth UI
+* 🧩 Clean, responsive UI with scrollable lap list
+
 ---
 
-## 🛠️ Technologies Used
+## 🛠 Tech Stack
 
-| Component       | Description                               |
-| --------------- | ----------------------------------------- |
-| `customtkinter` | Modern UI components for Tkinter          |
-| `tkcalendar`    | Date selection widget                     |
-| `PIL` (Pillow)  | Image loading for logos/icons             |
-| `threading`     | Background updates for real-time tracking |
-| `json`          | Persistent storage of tasks               |
-| `datetime`      | Due date logic                            |
-| `ttk`           | Additional styling widgets                |
+| Layer | Tool                                                              |
+| ----- | ----------------------------------------------------------------- |
+| GUI   | [`customtkinter`](https://github.com/TomSchimansky/CustomTkinter) |
+| Core  | Python Standard Library (`time`, `threading`)                     |
+| UX    | Dark/Light Mode, Scrollable Frames                                |
+| OS    | Cross-platform (Windows, macOS, Linux)\*                          |
+
+> \*Tested on Windows 11
+
 ---
 
-## 📂 Project Structure
+## 💾 Requirements
+
+* Python 3.9 or later
+* pip
+
+### 🔧 Install Dependencies
 
 ```bash
-todo-app/
+pip install customtkinter
+```
+
+---
+
+## 🚀 Run the App
+
+```bash
+python stopwatch_app.py
+```
+
+Make sure you're inside the correct directory before running the above command.
+
+---
+
+## 📦 Clone the Repository
+
+```bash
+git clone https://github.com/GITWithAkshay/tkinter-stopwatch-app.git
+cd tkinter-stopwatch-app
+````
+
+---
+
+## 📁 Project Structure
+
+```bash
+tkinter-stopwatch-app/
 │
-├── main.py              # Main Python file with TodoApp class
-├── tasks.json           # Persistent storage for tasks (created on first run)
-├── assets/
-│   ├── logo.png         # Logo/icon for window (optional)
-│   └── background.jpg   # Optional background image
-```
----
-
-## 🚀 Getting Started
-
-### ✅ Prerequisites
-
-Make sure the following Python packages are installed:
-
-```bash
-pip install customtkinter tkcalendar pillow
+├── stopwatch_app.py         # Main application file
+├── README.md                # You're reading it!
+└── assets/                  # Optional: icons or style assets (if any)
 ```
 
-### ▶️ Run the App
-
-```bash
-python main.py
-```
 ---
 
-## 💡 How It Works
+## 🔎 How it Works
 
-* When the app launches, it loads all tasks from `tasks.json`.
-* You can add new tasks by filling in task description, date, and priority.
-* Tasks are automatically sorted and displayed.
-* You can edit or delete any task.
-* Threads track real-time deadlines and show reminders.
-* All changes are saved immediately to `tasks.json`.
+* **Time tracking** is handled using `time.time()` and updated every 10ms using `after()`.
+* **Lap times** are calculated relative to the last recorded lap.
+* **Dark/light themes** are toggled using `ctk.set_appearance_mode()`.
+* All components are placed inside a **grid layout** and **resized dynamically**.
+
 ---
 
-## 🧠 Future Enhancements (Ideas)
+## 🎨 UI Preview
 
-* 🔔 Desktop notifications for task reminders
-* 📱 Mobile version with Kivy or Flutter
-* ☁️ Sync with Google Calendar / Firebase
-* 📊 Task analytics (pie charts of completion, categories, etc.)
-* 🔒 Login/Authentication system
+![image alt](https://github.com/GITWithAkshay/PRODIGY_AD_03/blob/f00d1fc60387954ea736663edf11aa3e9c8781cb/Screenshot%20(183).png)
+![image alt](https://github.com/GITWithAkshay/PRODIGY_AD_03/blob/f00d1fc60387954ea736663edf11aa3e9c8781cb/Screenshot%20(189).png)
+
 ---
 
-## 🖼️ Screenshots
+## 🧠 Future Enhancements
 
-![image alt]()
+* [ ] Save laps to CSV or JSON
+* [ ] Keyboard shortcuts (e.g., Space to Start/Pause)
+* [ ] Timer mode with countdown and alarms
+* [ ] Sound notifications
+
 ---
 
-## 🧩 Crazy Add-on Calculations? (Optional Fun)
+## 📜 License
 
-You can even integrate this app with a "crazy calculator" from your other project to:
-
-* Calculate time remaining in complex formulas
-* Add Pomodoro timers based on task durations
-* Predict productivity with gamification
----
-
-## 🤝 Contributions
-Feel free to fork and enhance the app! Submit PRs if you have ideas for better UI/UX, data persistence, or cloud features.
----
-
-## 🛡️ License
 Feel free to use, modify, and distribute.
+
 ---
