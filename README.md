@@ -38,7 +38,7 @@ A modern, feature-rich desktop stopwatch built using Python and [CustomTkinter](
 ### 🔧 Install Dependencies
 
 ```bash
-pip install customtkinter
+pip install -r requirements.txt
 ```
 
 ---
